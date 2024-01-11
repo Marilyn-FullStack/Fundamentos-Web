@@ -257,16 +257,26 @@ button:hover {
     margin-bottom: 100px;
 }
 
+#servicos div p {
+    color: var(--cor05);
+    text-shadow: 1px 1px 3px var(--cor04);
+    font-size: 14px;
+    text-align: center;
+    padding: 5px;
+    margin-bottom: 15px;
+}
+
 #servicos li {
-    background-color: var(--cor07);
     border-radius: 8px;
     box-shadow: 0 0 20px var(--cor02);
     margin-bottom: 50px;
     padding: 20px;
 }
+
 aside {
-font-size: 10px;
+    font-size: 10px;
 }
+
 footer {
     background: linear-gradient(to right, var(--cor05), var(--cor07));
     color: var(--cor07);
