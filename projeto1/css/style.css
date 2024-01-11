@@ -1,0 +1,425 @@
+    @charset "UTF-8";
+    @import url('https://fonts.googleapis.com/css2?family=Cantarell&family=Kdam+Thmor+Pro&family=Quicksand:wght@300&display=swap');
+
+    * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-decoration: none;
+        list-style: none;
+        font-family: 'Quicksand', sans-serif;
+    }
+
+    :root {
+        --cor01: rgba(0, 0, 0, 0.5);
+        --cor02: #a85d64;
+        --cor03: #3498db;
+        --cor04: #2c3e50;
+        --cor05: #2078b4;
+        --cor06: #ecf0f1;
+        --cor07: #2980b9;
+        --cor08: #34495e;
+        --cor09: #95a5a6;
+        --cor10: #e74c3c;
+    }
+
+    /*style index.html*/
+    body {
+        font-size: 16px;
+        text-shadow: 2px 2px 4px var(--cor01);
+        line-height: 1.6;
+        color: var(--cor04);
+        background-color: var(--cor06);
+    }
+
+    /* Estilo para a barra de navegação */
+    nav {
+        background: linear-gradient(to right, var(--cor05), var(--cor08));
+        /* Cor de fundo da barra de navegação */
+        box-shadow: 0 0 10px var(--cor01);
+        height: 40px;
+        padding: 10px 0;
+        /* Espaçamento interno na barra de navegação */
+        text-align: center;
+        /* Alinhamento do texto no centro */
+    }
+
+    /* Estilo para os itens de menu */
+    #menu li {
+        display: inline-block;
+        /* Alinhar itens na mesma linha */
+        margin-right: 20px;
+        /* Espaçamento entre os itens de menu */
+    }
+
+    /* Estilo para os links no menu */
+    #menu a {
+        /* Remover sublinhado padrão dos links */
+        color: var(--cor06);
+        /* Cor do texto nos links */
+        font-weight: bold;
+        /* Negrito no texto dos links */
+        font-size: 16px;
+        /* Tamanho do texto nos links */
+        padding: 8px 15px;
+        /* Espaçamento interno nos links */
+        border-radius: 5px;
+        /* Cantos arredondados nos links */
+        transition: background-color 0.3s ease;
+        /* Transição suave da cor de fundo */
+    }
+
+    /* Estilo para os links no menu ao passar o mouse */
+    #menu a:hover {
+        background-color: var(--cor03);
+        /* Cor de fundo ao passar o mouse */
+        color: var(--cor06);
+        /* Cor do texto ao passar o mouse */
+        filter: opacity(0.9);
+    }
+
+    /* Estilos para elementos com a classe .center */
+    .center {
+        font-weight: bold;
+        text-align: center;
+        color: var(--cor07);
+        margin: 20px 0;
+        /* Ajuste da margem para cima e para baixo */
+        padding: 20px;
+        text-shadow: 2px 2px 4px var(--cor01);
+    }
+
+    /* Estilos para elementos com a classe .container */
+    .container {
+        display: flex;
+        flex-flow: row;
+        justify-content: center;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    /* Estilo para parágrafos */
+    p {
+        font-size: 14px;
+        text-align: center;
+        padding: 5px;
+        text-shadow: 2px 2px 4px var(--cor01);
+        margin-bottom: 15px;
+    }
+
+    img {
+        width: 100%;
+        /* Usa a largura total do contêiner */
+        max-width: 300px;
+        /* Define um tamanho máximo para a imagem */
+        height: auto;
+        /* Mantem a proporção original da imagem */
+        border-radius: 50%;
+        margin: 0 auto;
+        /* Centraliza a imagem no contêiner */
+        box-shadow: 0 0 20px var(--cor01);
+        transition: transform 3.3s ease;
+        /* Adiciona uma transição suave para a transformação */
+    }
+
+    /* Efeito de redução da imagem ao passar o mouse */
+    img:hover {
+        transform: scale(0.9);
+        /* Reduz o tamanho da imagem ao passar o mouse */
+    }
+
+    /* Adicionando as propriedades do iframe*/
+    iframe[data-src] {
+        transition: opacity 0.3s ease;
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+    }
+
+    iframe[data-src].lazy-loaded {
+        opacity: 1;
+    }
+
+    iframe {
+        width: 560px;
+        height: 315px;
+        padding-bottom: 30px;
+        display: block;
+        margin: 0 auto;
+    }
+
+    /*style contato.html*/
+
+    #form-container {
+        max-width: 600px;
+        margin: 0 auto 5%;
+        /* Margem na parte inferior como porcentagem da largura */
+        padding: 4%;
+        border: 1px solid var(--cor09);
+        border-radius: 10px;
+        box-shadow: 0 0 2vw var(--cor01);
+        /* Unidade de viewport para sombra */
+        background-color: var(--cor06);
+
+        h1 {
+            font-weight: bold;
+            text-align: center;
+            color: var(--cor03);
+            margin: 4% 0;
+            padding: 4%;
+        }
+    }
+
+    label {
+        display: block;
+        margin-bottom: 10px;
+        font-size: 1.2em;
+        font-weight: bold;
+        padding: 10px;
+        border-radius: 15px;
+        transition: color 1.3s ease-in-out;
+        text-shadow: 1px 1px 2px var(--cor01);
+        background: linear-gradient(to right, var(--cor03), var(--cor04));
+        color: var(--cor06);
+    }
+
+    label:hover {
+        background-color: var(--cor06);
+        padding: 10px;
+    }
+
+
+    label:before {
+        content: "\2022";
+        /* Código do caractere de ponto (•) */
+        margin-right: 5px;
+        color: var(--cor10);
+    }
+
+    input,
+    textarea {
+        width: calc(100% - 20px);
+        /* Considerando o padding de 10px em cada lado */
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        font-size: 1.1em;
+        font-weight: bold;
+        transition: box-shadow 1.3s ease-in-out;
+        box-shadow: 2px 2px 5px var(--cor01);
+    }
+
+    input:focus,
+    textarea:focus {
+        box-shadow: 0 0 5px var(--cor08);
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+        color: var(--cor09);
+    }
+
+    button {
+        display: block;
+        padding: 15px 20px;
+        font-size: 16px;
+        border: 2px solid var(--cor04);
+        background: linear-gradient(to right, var(--cor05), var(--cor04));
+        color: var(--cor06);
+        border-radius: 15px;
+        box-shadow: 0 4px 6px var(--cor01);
+        cursor: pointer;
+        transition: transform 3.3s ease;
+    }
+
+    button:before {
+        content: "\2022";
+        /* Código do caractere de ponto (•) */
+        margin-right: 5px;
+        color: var(--cor10);
+    }
+
+    button:hover {
+        transform: scale(1.1);
+        font-weight: bold;
+        background: linear-gradient(to right, var(--cor04), var(--cor05));
+    }
+
+    /* Estilos para dispositivos móveis) */
+    @media screen and (max-width: 767px) {
+        body {
+            font-size: 14px;
+        }
+
+        nav {
+            height: 30px;
+            /* Ajuste da altura da barra de navegação para dispositivos menores */
+            padding: 5px 0;
+            /* Ajuste do espaçamento interno da barra de navegação para dispositivos menores */
+
+        }
+
+        /* Ajuste para dispositivos móveis no menu */
+        #menu li {
+            margin-right: 0;
+            /* Remove o espaçamento entre os itens do menu */
+            margin-bottom: 5px;
+            /* Adiciona um espaçamento inferior entre os itens do menu */
+        }
+
+        /* Ajuste para dispositivos móveis na classe .center */
+        .center {
+            margin: 10px 0;
+            /* Ajuste da margem para dispositivos móveis */
+            padding: 10px;
+            /* Ajuste do espaçamento interno para dispositivos móveis */
+            font-size: 18px;
+            /* Ajuste do tamanho da fonte para dispositivos móveis */
+        }
+
+        .container {
+            flex-direction: column;
+        }
+
+        iframe {
+            max-width: 100%;
+            /* Largura máxima para dispositivos móveis */
+            min-width: 300px;
+            /* Largura mínima para essa faixa de tamanhos de tela */
+        }
+
+          /* style contato.html */
+        #form-container {
+            margin: 5% auto;
+            /* Ajuste a margem para dispositivos móveis */
+            padding: 8%;
+        }
+
+        #form-container h1 {
+            margin: 5% 0;
+            padding: 5%;
+        }
+
+        label {
+            font-size: 1em;
+            /* Ajuste o tamanho da fonte para dispositivos menores */
+            padding: 8px;
+            /* Ajuste do espaçamento interno para dispositivos menores */
+        }
+
+        label:hover {
+            background-color: transparent;
+            /* Remova a cor de fundo ao passar o mouse em dispositivos menores */
+            padding: 8px;
+        }
+
+        input,
+        textarea {
+            font-size: 1em;
+            /* Ajuste o tamanho da fonte para dispositivos menores */
+            padding: 8px;
+            /* Ajuste do espaçamento interno para dispositivos menores */
+            box-shadow: 2px 2px 5px var(--cor01);
+        }
+
+        input:focus,
+        textarea:focus {
+            box-shadow: 0 0 3px var(--cor07);
+        }
+
+        button {
+            padding: 12px 16px;
+            /* Ajuste do padding para dispositivos menores */
+            font-size: 14px;
+            /* Ajuste do tamanho da fonte para dispositivos menores */
+        }
+    }
+
+    /* Estilos adicionais para dispositivos com telas grandes*/
+    @media screen and (min-width: 1207px) {
+
+        nav {
+            height: 40px;
+            /* Ajustar a altura da barra de navegação para telas grandes */
+            padding: 10px 0;
+            /* Ajustar o espaçamento interno da barra de navegação para telas grandes */
+        }
+
+        /* Ajuste específico para dispositivos grandes no menu */
+        #menu li {
+            margin-right: 50px;
+            /* Adiciona um espaçamento entre os itens do menu */
+            margin-bottom: 25px;
+            /* Adiciona um espaçamento inferior entre os itens do menu */
+        }
+
+        /* Ajuste para dispositivos grandes na classe .center */
+        .center {
+            margin: 30px 0;
+            /* Ajuste da margem para dispositivos grandes */
+            padding: 30px;
+            /* Ajuste do espaçamento interno para dispositivos grandes */
+            font-size: 24px;
+            /* Ajuste do tamanho da fonte para dispositivos grandes */
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        /* Ajuste para parágrafos em dispositivos grandes */
+        p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        iframe {
+            max-width: 800px;
+            /* Largura máxima para telas grandes */
+        }
+
+        /* style contato.html */
+        #form-container {
+            margin: 2% auto;
+            /* Ajuste a margem para telas grandes */
+            padding: 2%;
+        }
+
+        #form-container h1 {
+            margin: 2% 0;
+            padding: 2%;
+        }
+
+        label {
+            font-size: 1.5em;
+            /* Ajuste o tamanho da fonte para telas grandes */
+            padding: 15px;
+            /* Ajuste do espaçamento interno para telas grandes */
+        }
+
+        label:hover {
+            background-color: var(--cor06);
+            padding: 15px;
+        }
+
+        input,
+        textarea {
+            font-size: 1.2em;
+            /* Ajuste o tamanho da fonte para telas grandes, se necessário */
+            padding: 12px;
+            /* Ajuste do espaçamento interno para telas grandes */
+        }
+
+        input:focus,
+        textarea:focus {
+            box-shadow: 0 0 7px var(--cor07);
+        }
+
+        button {
+            padding: 18px 24px;
+            /* Ajuste do padding para telas grandes */
+            font-size: 18px;
+            /* Ajuste do tamanho da fonte para telas grandes */
+        }
+    }
